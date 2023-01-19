@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  devbox:
+    build: .
+    container_name: python-sandbox
+    command: tail -F /code/null  # keeps the container from exiting
+
+    volumes:
+      - ./src:/code/src
+      - ./data:/code/data
